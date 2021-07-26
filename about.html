@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-commerce | About Us</title>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/bb9277534f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="nav nav_top">
+            <div class="logo">
+                <a href="index.html"> <img src="Images/YeeShopLogo.png" width="100px"> </a>
+            </div>
+            <div class="nav_menu">
+                <a href="about.html">About US</a>|
+                <a href="service.html">Services</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href="contact.html">Contact</a>|
+                <a href="#">Login/Sign Up</a>
+            </div>
+        </nav>
+        <!--About Us-->
+        <div class="about_us">
+            <h2>About Us</h2>
+            <div class="about_content">
+                <p>
+                    Lorem Ipsum is simply dummy text of 
+                    the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard 
+                    dummy text ever since the 1500s, when an 
+                    unknown printer took a galley of type and 
+                    scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, 
+                    but also the leap into electronic typesetting, 
+                    remaining essentially unchanged. It was 
+                    popularised in the 1960s with the release 
+                    of Letraset sheets containing Lorem Ipsum 
+                    passages, and more recently with desktop 
+                    publishing software like Aldus PageMaker 
+                    including versions of Lorem Ipsum.
+                    Lorem Ipsum is simply dummy text of 
+                    the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard 
+                    dummy text ever since the 1500s, when an 
+                    unknown printer took a galley of type and 
+                    scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, 
+                    but also the leap into electronic typesetting, 
+                    remaining essentially unchanged. It was 
+                    popularised in the 1960s with the release 
+                    of Letraset sheets containing Lorem Ipsum 
+                    passages, and more recently with desktop 
+                    publishing software like Aldus PageMaker 
+                    including versions of Lorem Ipsum. 
+                </p>
+            </div>
+            <hr>
+            <div>
+                <h2>Our Mission</h2>
+                <p>Lorem Ipsum is simply dummy text of 
+                    the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard 
+                    dummy text ever since the 1500s, when an 
+                    unknown printer took a galley of type and 
+                    scrambled it to make a type specimen book. 
+                    It has survived not only five centuries, 
+                    but also the leap into electronic typesetting, 
+                    remaining essentially unchanged. It was 
+                    popularised in the 1960s with the release 
+                    of Letraset sheets containing Lorem Ipsum 
+                    passages, and more recently with desktop 
+                    publishing software like Aldus PageMaker 
+                    including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+        <!--Feedback OR Review-->
+        <div class="feed">
+            <h2>Write a review</h2>
+            <div class="feed_form">
+                <form name="submit-googlesheet" method="POST">
+                    <input type="text" name="Name" placeholder="Name"><br>
+                    <input type="email" name="Email" placeholder="Email ID"><br>
+                    <input type="number" name="Contact" placeholder="Contact Number"><br>
+                    <textarea rows="5" cols="7" name="Review" placeholder="Write your review"></textarea><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer part of this page -->
+        <footer>
+            <div class="footer_logo">
+                <a href="index.html"> <img src="Images/YeeShopLogo.png" width="100px"> </a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="about.html">About Us</a>|
+                <a href="service.html">Services</a>|
+                <a href="blog.html">Blogs</a>|
+                <a href=" ">Login</a>|
+                <a href=" ">Sign Up</a>
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href=" ">Privacy Policy</a>|
+                <a href=" ">Terms of Use</a>|
+                <a href=" ">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/profile.php?id=100061493304035" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/yeerajan/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/yeerajan_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/yeerajan_/" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="contacts">
+                <h3>Contact Us</h3>
+                <a href="https://api.WhatsApp.com/send?phone=+919570598045" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel: +917370802557"><i class="fas fa-phone-alt"></i></a>
+                <a href="mailto: project.rajan2@gmail.com"><i class="far fa-envelope"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 YeeShop.Com All rights reserved.</p>
+        </footer>
+
+        <script type="text/javascript">
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxo5GgdHtCSicu7yQWyiHPcNNqnf6IqJqttAosVsC4Wd4pJaQls3urxK_Q-b2_85zuhLQ/exec'
+            const form = document.forms['submit-googlesheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank you for your review, Hope you had a great shopping with us."))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+    </body>
+</html>
